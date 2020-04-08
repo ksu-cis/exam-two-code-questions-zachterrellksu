@@ -7,6 +7,20 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <TextBlock>Customize Cobbler</TextBlock>
+        <CheckBox Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" IsChecked="{Binding Path=WithIceCream}">With Ice Cream
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"/>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <RadioButton x:Name="BlueBerry" FontSize="20" Margin="0,0,0,20" IsChecked="{Binding Path=BlueBerry}">Blueberry</RadioButton>
+            <RadioButton x:Name="Cherry" FontSize="20"  Margin="0,0,0,20" IsChecked="{Binding Path=Cherry}">Cherry</RadioButton>
+            <RadioButton x:Name="Peach" FontSize="20" IsChecked="{Binding Path=Peach}">Peach</RadioButton>
+        </StackPanel>
     </Grid>
 </UserControl>
